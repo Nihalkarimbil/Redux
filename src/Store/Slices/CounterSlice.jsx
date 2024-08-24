@@ -4,6 +4,7 @@ export const counterSlice=createSlice({
     name:'counter',
     initialState:{
         value:0,
+        value2:5
     },
     reducers:{
         incriment:((state)=>{
@@ -11,9 +12,12 @@ export const counterSlice=createSlice({
         }),
         decriment:((state)=>{
             state.value -= 1
+        }),
+        incrimentby5:((state)=>{
+            state.value2 +=5
         })
     }
 })
 
-export const {incriment,decriment}=counterSlice.actions
+export const {incriment,decriment,incrimentby5}=counterSlice.actions
 export default counterSlice.reducer
